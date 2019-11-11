@@ -1,88 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Contact form</title>
     <style>
-      html, body {
-      min-height: 100%;
-      }
-      body, div, form, input, select, p { 
-      padding: 0.4rem;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      text-align: center
-      }
-      h3 {
-      margin: 12px 0;
-      color: #00BFFF;
-      }
-      .main-block {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      }
-      form {
-      width: 100%;
-      padding: 20px;
-      }
-      fieldset {
-      border: none;
-      border-top: 1px solid #00BFFF;
-      }
-      label {
-      padding: 0 5px;
-      text-align: right;
-      vertical-align: middle;
-      }
-      input {
-      padding: 5px;
-      vertical-align: middle;
-      }
-      
-      button {
-      width: 100%;
-      padding: 10px 0;
-      margin: 10px auto;
-      border-radius: 5px; 
-      border: none;
-      background: #00BFFF; 
-      font-size: 14px;
-      font-weight: 600;
-      color: #fff;
-      }
-     
+        html,
+        body {
+            min-height: 100%;
+            background-color: #c3b091
+        }
+
+        body,
+        div,
+        form,
+        input,
+        select,
+        p {
+            padding: 0.4rem;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            text-align: center
+        }
+
+        h3 {
+            margin: 12px 0;
+            color: #00BFFF;
+        }
+
+        .main-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #c3b091;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+        }
+
+        fieldset {
+            border-top: 1px solid #00BFFF;
+        }
+
+        label {
+            padding: 0 5px;
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        input {
+            padding: 5px;
+            vertical-align: middle;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 0;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: none;
+            background: #00BFFF;
+            font-size: 14px;
+            font-weight: 600;
+            color: #c3b091;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main-block">
-    <form name="contact" method="POST" data-netlify="true">
-      <fieldset>
-        <legend>
-          <h3>Please feel free to send a message</h3>
-        </legend>
-        <div  class="message us">
-          <div><label>Email<label><input type="text" name="email" required></div>
-          <div><label>Message</label><input type="message" name="message" required></div>
-        </div>
-      </fieldset>    
-      <fieldset>
-        <legend>
-          <h3>Would you like a reply?</h3>
-        </legend>
-        <div  class="message back">
-          <div class="radio button">
-            <input type="radio" name="button"><span> YES </span>
-          </div>
-          <div class="radio button">
-            <input type="radio" name="button"><span> NO </span>
-          </div>
-      </fieldset>
-      <button type="submit" href="/">Send Message</button>
-    </form>
-    </div> 
-  </body>
+        <form name="contact" method="POST" data-netlify="true">
+            <fieldset>
+                <legend>
+                    <h3>Please feel free to send a message</h3>
+                </legend>
+                <div class="message us">
+                    <div><label>Email<input type="text" name="email" required></label></div>
+                    <div><label>Message
+                            <text_area type="message" name="message" required>
+                        </label>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>
+                        <h3>Would you like a reply?</h3>
+                    </legend>
+                    <div class="message back">
+                        <div class="radio button">
+                            <input type="radio" name="reply"><span> YES </span>
+                        </div>
+                        <div class="radio button">
+                            <input type="radio" name="reply"><span> NO </span>
+                        </div>
+                        <button type="submit">Send Message</button>
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
 </html>
